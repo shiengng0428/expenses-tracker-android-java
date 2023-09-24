@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".expensesManagerModule.AddExpenseActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        app:contentPadding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/teal_700"
+                    android:text="Amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <!-- change number to numberDecimal -->
+                <EditText
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:hint="RM "
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/teal_700"
+                    android:text="Amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RadioGroup
+                    android:id="@+id/typeRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/incomeRadio"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="Income"/>
+
+                    <RadioButton
+                        android:id="@+id/expenseRadio"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="Expenses"/>
+
+
+
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:textColor="@color/teal_700"
+                    android:text="Category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <!-- change number to numberDecimal -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/select"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_complete_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:textColor="@color/teal_700"
+                    android:text="Item Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <!-- change number to numberDecimal -->
+                <EditText
+                    android:id="@+id/itemName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:hint="Item Name"
+                    android:inputType="text"
+                    android:minHeight="48dp" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:textColor="@color/teal_700"
+                    android:text="Note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <!-- change number to numberDecimal -->
+                <EditText
+                    android:id="@+id/note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:hint="Description"
+                    android:inputType="text"
+                    android:minHeight="48dp" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_expenses_date"
+                    android:text="Date"
+                    android:textColor="#555555"
+                    android:padding="6dp"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:hint="Please Select Expenses Date"
+                    android:focusable="false"
+                    android:inputType="date"
+                    android:minHeight="48dp"
+                    android:padding="6dp"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_expenses_time"
+                    android:text="Time"
+                    android:textColor="#555555"
+                    android:padding="6dp"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:hint="Please Select Expenses Time"
+                    android:focusable="false"
+                    android:inputType="time"
+                    android:minHeight="48dp"
+                    android:padding="6dp"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:textColor="@color/teal_700"
+                    android:text="Shop Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <!-- change number to numberDecimal -->
+                <EditText
+                    android:id="@+id/shopName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:hint="Shop Name"
+                    android:inputType="text"
+                    android:minHeight="48dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:textColor="@color/teal_700"
+                    android:text="Phone Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <!-- change number to numberDecimal -->
+                <EditText
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:minHeight="48dp" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_expenses_address"
+                    android:text="Address"
+                    android:textColor="#555555"
+                    android:padding="6dp"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:hint="Address"
+                    android:inputType="text"
+                    android:minHeight="48dp" />
+
+            </LinearLayout>
+
+
+<!--&lt;!&ndash;            ADD Attachment &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/textView_expenses_attach_receipt"-->
+<!--                    android:text="Add Attachment"-->
+<!--                    android:textColor="#555555"-->
+<!--                    android:padding="6dp"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:layout_marginTop="10dp"/>-->
+
+<!--                <Button-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/upload_pic_choose_button"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:text="Choose Receipt Picture"-->
+<!--                    android:layout_marginRight="70dp"-->
+<!--                    android:layout_marginLeft="70dp"-->
+<!--                    android:backgroundTint="@color/teal_200"/>-->
+
+
+<!--                <ImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="500dp"-->
+<!--                    android:id="@+id/imageView_receipt_dp"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginBottom="20dp"-->
+<!--                    android:background="@drawable/border"-->
+<!--                    android:layout_below="@+id/upload_pic_choose_button"/>-->
+
+<!--            </LinearLayout>-->
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</ScrollView>

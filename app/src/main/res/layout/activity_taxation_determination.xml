@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".taxationModule.TaxationDeterminationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_determination_head"
+            android:layout_marginTop="10dp"
+            android:text="Taxation Determination"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_marital_status"
+            android:layout_below="@+id/textView_taxation_determination_head"
+            android:text="Marital Status"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_marital_status"
+            android:id="@+id/radio_group_taxation_YA2022_marital_status"
+            android:background="@drawable/border">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_marital_status_single"
+                android:text="Single"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_marital_status_married"
+                android:text="Married"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_marital_status_divorce"
+                android:text="Divorce/Widow"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_number_of_children"
+            android:layout_below="@+id/radio_group_taxation_YA2022_marital_status"
+            android:text="Number of children"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_number_of_children"
+            android:id="@+id/radio_group_taxation_YA2022_number_of_children"
+            android:background="@drawable/border">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_no_children"
+                android:text="None"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_1_children"
+                android:text="One"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_2_or_more_children"
+                android:text="Two or more"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_separately_joint"
+            android:layout_below="@+id/radio_group_taxation_YA2022_number_of_children"
+            android:text="Separate or joint"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_separately_joint"
+            android:id="@+id/radio_group_taxation_YA2022_separately_joint"
+            android:background="@drawable/border">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_joint"
+                android:text="Joint"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_separately"
+                android:text="Separately"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/textView_input_salary_income"
+            android:layout_below="@+id/radio_group_taxation_YA2022_separately_joint"
+            android:text="Please enter your annual employment income"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editText_input_salary_income"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_input_salary_income"
+            android:background="@drawable/border"
+            android:hint="RM"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/editText_input_salary_income"
+            android:id="@+id/textView_taxation_table_row1">
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row1_col1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="Type of Assessment"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row1_col2"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="Annual Income"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row1_col3"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="Monthly Income"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_table_row1"
+            android:id="@+id/textView_taxation_table_row2">
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row2_col1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="Self"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row2_col2"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM37,333"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row2_col3"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM3,111"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_table_row2"
+            android:layout_marginTop="5dp"
+            android:id="@+id/textView_taxation_table_row3">
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row3_col1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="Separately"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_table_row3"
+            android:id="@+id/textView_taxation_table_row4">
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row4_col1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="Married with no child"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row4_col2"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM37,333"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row4_col3"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM3,111"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_table_row4"
+            android:id="@+id/textView_taxation_table_row5">
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row5_col1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="Married with 1 child"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row5_col2"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM37,333"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row5_col3"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM3,111"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_table_row5"
+            android:id="@+id/textView_taxation_table_row6">
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row6_col1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="Married with 2 child"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row6_col2"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM41,333"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row6_col3"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM3,444"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_table_row6"
+            android:layout_marginTop="5dp"
+            android:id="@+id/textView_taxation_table_row7">
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row7_col1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="Joint"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_table_row7"
+            android:id="@+id/textView_taxation_table_row8">
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row8_col1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="Married with no child"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row8_col2"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM48,000"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row8_col3"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM4,000"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_table_row8"
+            android:id="@+id/textView_taxation_table_row9">
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row9_col1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="Married with 1 child"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row9_col2"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM50,000"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row9_col3"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM4,167"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_table_row9"
+            android:id="@+id/textView_taxation_table_row10">
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row10_col1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="Married with 2 child"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row10_col2"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM52,000"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxation_table_row10_col3"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="RM4,333"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/textView_result"
+            android:layout_below="@+id/textView_taxation_table_row10"
+            android:text="Result"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/textView_result2"
+            android:layout_below="@+id/textView_result"
+            android:text="Result"
+            android:background="@drawable/border3"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>

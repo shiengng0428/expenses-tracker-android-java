@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#754EE4</color>
+    <color name="purple_700">#644AC3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="green_normal">#2E9797</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_green">#006400</color>
+    <color name="light_grey">#EDF2F7</color>
+    <color name="red">#FF0000</color>
+    <color name="lavender">#8692f7</color>
+    <color name="tiff_blue">#7bf2da</color>
+    <color name="grey">#A2AFAD</color>
+
+    <color name="backgroundColor">#defbcB</color>
+    <color name="orange">#FF5722</color>
+    <color name="green">#4CAF50</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="blue">#2196F3</color>
+    <color name="purple">#9C27B0</color>
+    <color name="pink">#F18880</color>
+    <color name="deep_orange">#FF5722</color>
+    <color name="indigo">#0228F7</color>
+    <color name="light_green">#BAEB83</color>
+
+    <color name="light_blue">#ADD8E6</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="orange_700">#FF8F00</color>
+    <color name="blue_grey">#607D8B</color>
+    <color name="light_blue_A400">#00B0FF</color>
+    <color name="light_green_A700">#64DD17</color>
+    <color name="red_900">#B71C1C</color>
+    <color name="green_900">#1B5E20</color>
+    <color name="teal_900">#004D40</color>
+    <color name="purple_900">#4A148C</color>
+    <color name="orange_900">#FF6D00</color>
+    <color name="yellow_900">#FFD600</color>
+    <color name="teal_A700">#00BFA5</color>
+    <color name="pink_900">#880E4F</color>
+    <color name="blue_900">#0D47A1</color>
+    <color name="deep_purple_900">#311B92</color>
+    <color name="red_A700">#D50000</color>
+</resources>

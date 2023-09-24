@@ -1,0 +1,1739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    tools:ignore="MissingClass">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_head"
+            android:layout_marginTop="10dp"
+            android:text="Tax Calculator Year of Assessment 2022 "
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_income_details_header"
+            android:layout_below="@+id/textView_taxation_YA2022_head"
+            android:text="Income details"
+            android:background="@color/tiff_blue"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_total_annual_income"
+            android:layout_below="@+id/textView_taxation_YA2022_income_details_header"
+            android:text="1. Total Annual Income(Exclude rental income and dividends)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_total_annual_income"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_total_annual_income"
+            android:background="@drawable/border"
+            android:hint="Enter your annual income"
+            android:cursorVisible="false"
+            android:inputType="none"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_compensation"
+            android:layout_below="@+id/editText_taxation_YA2022_total_annual_income"
+            android:text="2. Do you get compensation for loss of employment?"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_compensation"
+            android:id="@+id/radio_group_taxation_YA2022_compensation_true_false"
+            android:background="@drawable/border">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_compensation_true"
+                android:text="True"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_compensation_false"
+                android:text="False/No loss of Employment"
+                android:layout_marginLeft="0dp"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_year_service_completed"
+            android:layout_below="@+id/radio_group_taxation_YA2022_compensation_true_false"
+            android:text="3. Year of Service Completed"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_year_service_completed_description"
+            android:layout_below="@+id/textView_taxation_YA2022_year_service_completed"
+            android:text="Description: Every completed year of service with the same employer or with companies in the same group"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_year_service_completed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_year_service_completed_description"
+            android:background="@drawable/border"
+            android:hint="Enter year of service completed"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_compensation_amount_received"
+            android:layout_below="@+id/editText_taxation_YA2022_year_service_completed"
+            android:text="4. Do you get compensation for loss of employment?"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_compensation_amount_received"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_compensation_amount_received"
+            android:background="@drawable/border"
+            android:hint="Enter compensation amount received"
+            android:cursorVisible="false"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_total_income_details"
+            android:layout_below="@+id/editText_taxation_YA2022_compensation_amount_received"
+            android:text="Total of the Income Detail Section"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_amount_total_income_details"
+            android:background="@drawable/border"
+            android:layout_below="@+id/textView_taxation_YA2022_total_income_details"
+            android:text="RM"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:id="@+id/button_start_calculate_income_details"
+            android:layout_below="@+id/textView_taxation_YA2022_amount_total_income_details"
+            android:layout_marginTop="10dp"
+            android:text="Calculate Total Income Detail"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_tax_relief_details_header"
+            android:layout_below="@+id/button_start_calculate_income_details"
+            android:text="Tax Relief details"
+            android:background="@color/tiff_blue"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_disabled"
+            android:layout_below="@+id/textView_taxation_YA2022_tax_relief_details_header"
+            android:text="5. Are you disabled?"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_disabled"
+            android:id="@+id/radio_group_taxation_YA2022_disabled_yes_no"
+            android:background="@drawable/border">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_disabled_yes"
+                android:text="Yes"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_disabled_no"
+                android:text="No"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_marital_status"
+            android:layout_below="@+id/radio_group_taxation_YA2022_disabled_yes_no"
+            android:text="6. Marital Status"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_marital_status"
+            android:id="@+id/radio_group_taxation_YA2022_marital_status"
+            android:background="@drawable/border">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_marital_status_single"
+                android:text="Single"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_marital_status_married"
+                android:text="Married"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_marital_status_divorce"
+                android:text="Divorce/Widow"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_husband_wife_disabled"
+            android:layout_below="@+id/radio_group_taxation_YA2022_marital_status"
+            android:text="7. Is your husband/wife disabled?"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_husband_wife_disabled"
+            android:id="@+id/radio_group_taxation_YA2022_husband_wife_disabled_yes_no"
+            android:background="@drawable/border">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_husband_wife_disabled_yes"
+                android:text="Yes"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_husband_wife_disabled_no"
+                android:text="No"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_husband_wife_working"
+            android:layout_below="@+id/radio_group_taxation_YA2022_husband_wife_disabled_yes_no"
+            android:text="8. Is your husband/wife working?"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_husband_wife_working"
+            android:id="@+id/radio_group_taxation_YA2022_husband_wife_working_yes_no"
+            android:background="@drawable/border">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_husband_wife_working_yes"
+                android:text="Yes"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_husband_wife_working_no"
+                android:text="No"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_payment_alimony_to_former_wife"
+            android:layout_below="@+id/radio_group_taxation_YA2022_husband_wife_working_yes_no"
+            android:text="9. Payment of alimony to former wife?(Limited to RM4000)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_payment_alimony_to_former_wife"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_payment_alimony_to_former_wife"
+            android:background="@drawable/border"
+            android:hint="limited to RM4000"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_do_you_have_child"
+            android:layout_below="@+id/editText_taxation_YA2022_payment_alimony_to_former_wife"
+            android:text="10. Do you have child?"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_do_you_have_child"
+            android:id="@+id/radio_group_taxation_YA2022_do_you_have_child"
+            android:background="@drawable/border">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_do_you_have_child_yes"
+                android:text="Yes"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_do_you_have_child_no"
+                android:text="No"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_total_tax_relief_details"
+            android:layout_below="@+id/radio_group_taxation_YA2022_do_you_have_child"
+            android:text="Total of the Tax Relief Detail Section"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_amount_total_tax_relief_details"
+            android:background="@drawable/border"
+            android:layout_below="@+id/textView_taxation_YA2022_total_tax_relief_details"
+            android:text="RM"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:id="@+id/button_start_calculate_tax_relief_details"
+            android:layout_below="@+id/textView_taxation_YA2022_amount_total_tax_relief_details"
+            android:layout_marginTop="10dp"
+            android:text="Calculate Total Tax Relief Detail"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_child_details_header"
+            android:layout_below="@+id/button_start_calculate_tax_relief_details"
+            android:text="Child details"
+            android:background="@color/tiff_blue"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_number_of_child_under_18"
+            android:layout_below="@+id/textView_taxation_YA2022_child_details_header"
+            android:text="11. Number of child under 18 years old?"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_number_of_child_under_18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_number_of_child_under_18"
+            android:background="@drawable/border"
+            android:hint="Number of unmarried under 18 years old"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_number_of_child_above_18_A_level"
+            android:layout_below="@+id/editText_taxation_YA2022_number_of_child_under_18"
+            android:text="12. Number of child above 18 years old?(A-Level)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_number_of_child_above_18_A_level_description"
+            android:layout_below="@+id/textView_taxation_YA2022_number_of_child_above_18_A_level"
+            android:text="Description: Each unmarried child of 18 years old and above who is receiving full-time education including(A-level, certificate, matriculation, preparatory)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_number_of_child_above_18_A_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_number_of_child_above_18_A_level_description"
+            android:background="@drawable/border"
+            android:hint="Number of unmarried 18 years old or above"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_number_of_child_above_18_diploma"
+            android:layout_below="@+id/editText_taxation_YA2022_number_of_child_above_18_A_level"
+            android:text="13. Number of child above 18 years old?(Diploma and above)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_number_of_child_above_18_diploma_description"
+            android:layout_below="@+id/textView_taxation_YA2022_number_of_child_above_18_diploma"
+            android:text="Description: Each unmarried child of 18 years and above that: receiving further education in Malaysia in respect of an award of diploma or higher(excluding matriculation/preparatory course) "
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_number_of_child_above_18_diploma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_number_of_child_above_18_diploma_description"
+            android:background="@drawable/border"
+            android:hint="Number of unmarried 18 years old or above"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_number_of_disabled_child"
+            android:layout_below="@+id/editText_taxation_YA2022_number_of_child_above_18_diploma"
+            android:text="14. Number of disabled child?"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_number_of_disabled_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_number_of_disabled_child"
+            android:background="@drawable/border"
+            android:hint="Number of disabled child(A-Level)"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_number_of_disabled_child_diploma_above_18"
+            android:layout_below="@+id/editText_taxation_YA2022_number_of_disabled_child"
+            android:text="15. Number of disabled child above 18 years old, diploma and above?"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_number_of_disabled_child_diploma_above_18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_number_of_disabled_child_diploma_above_18"
+            android:background="@drawable/border"
+            android:hint="Number of disabled child(Diploma)"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_sspn_child_education_saving"
+            android:layout_below="@+id/editText_taxation_YA2022_number_of_disabled_child_diploma_above_18"
+            android:text="16. SSPN(Child Education Saving)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_sspn_child_education_saving_description"
+            android:layout_below="@+id/textView_taxation_YA2022_sspn_child_education_saving"
+            android:text="Description: SSPN is an education saving scheme introduced by PTPTN (Perbadanan Tabung Pendidikan Tinggi Nasional). Its purpose is to encourage parents to plan and save for kid's education.(Limited to RM8000)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_sspn_child_education_saving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_sspn_child_education_saving_description"
+            android:background="@drawable/border"
+            android:hint="limited to RM8000"
+            android:cursorVisible="false"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_breastfeeding_equipment"
+            android:layout_below="@+id/editText_taxation_YA2022_sspn_child_education_saving"
+            android:text="16. Breastfeeding equipment"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_breastfeeding_equipment_description"
+            android:layout_below="@+id/textView_taxation_YA2022_breastfeeding_equipment"
+            android:text="Description: Purchase of breastfeeding equipment. Applicable to working women with child aged up to 2 years(every 2 years)Amount to buy breastfeeding equipment(RM)(Limited to RM1000)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_breastfeeding_equipment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_breastfeeding_equipment_description"
+            android:background="@drawable/border"
+            android:hint="limited to RM1000"
+            android:inputType="numberDecimal"
+            android:cursorVisible="false"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_childcare_centres_kindergartens_fees"
+            android:layout_below="@+id/editText_taxation_YA2022_breastfeeding_equipment"
+            android:text="17. Children centres and kindergartens fees"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_childcare_centres_kindergartens_fees_description"
+            android:layout_below="@+id/textView_taxation_YA2022_childcare_centres_kindergartens_fees"
+            android:text="Description: Individuals who enrol children up to 6 years of age, in child care centres or kindergartens registered with the Department of Social Welfare or Ministry(Limited to RM3000)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_childcare_centres_kindergartens_fees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_childcare_centres_kindergartens_fees_description"
+            android:background="@drawable/border"
+            android:hint="limited to RM3000"
+            android:cursorVisible="false"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_total_child_details"
+            android:layout_below="@+id/editText_taxation_YA2022_childcare_centres_kindergartens_fees"
+            android:text="Total of the Child Detail Section"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_amount_total_child_details"
+            android:background="@drawable/border"
+            android:layout_below="@+id/textView_taxation_YA2022_total_child_details"
+            android:text="RM"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:id="@+id/button_start_calculate_child_details"
+            android:layout_below="@+id/textView_taxation_YA2022_amount_total_child_details"
+            android:layout_marginTop="10dp"
+            android:text="Calculate Total Child Detail"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_parent_details_header"
+            android:layout_below="@+id/button_start_calculate_child_details"
+            android:text="Parents details"
+            android:background="@color/tiff_blue"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_parent_medical"
+            android:layout_below="@+id/textView_taxation_YA2022_parent_details_header"
+            android:text="18. Parent Medical"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_parent_medical_description"
+            android:layout_below="@+id/textView_taxation_YA2022_parent_medical"
+            android:text="Description: Medical expenses for parent include expenses to care for parents, example: through carer, for  parents who suffer from diseases, physical or mental disabilities and need regular treatment certified by qualified medical practitioner. Include treatment and care at home, day care centres or home care centres.(Limited to RM8000)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_parent_medical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_parent_medical_description"
+            android:background="@drawable/border"
+            android:hint="limited to RM8000"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_total_parent_details"
+            android:layout_below="@+id/editText_taxation_YA2022_parent_medical"
+            android:text="Total of the Parent Detail Section"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_amount_total_parent_details"
+            android:background="@drawable/border"
+            android:layout_below="@+id/textView_taxation_YA2022_total_parent_details"
+            android:text="RM"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_other_details_header"
+            android:layout_below="@+id/textView_taxation_YA2022_amount_total_parent_details"
+            android:text="Other details"
+            android:background="@color/tiff_blue"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_annuity_prs"
+            android:layout_below="@+id/textView_taxation_YA2022_other_details_header"
+            android:text="19. Annuity/PRS"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_annuity_prs_description"
+            android:layout_below="@+id/textView_taxation_YA2022_annuity_prs"
+            android:text="Description: Annuity Scheme Premium/ Private Retirement Scheme(PRS)(Limited to RM3000)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_annuity_prs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_annuity_prs_description"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="limited to RM3000"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_education_medical_insurance"
+            android:layout_below="@+id/editText_taxation_YA2022_annuity_prs"
+            android:text="20. Education and Medical Insurance(Limited to RM3000)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_education_medical_insurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_education_medical_insurance"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="limited to RM3000"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_education_fees_self"
+            android:layout_below="@+id/editText_taxation_YA2022_education_medical_insurance"
+            android:text="21. Education Fees(Self)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_education_fees_self_description"
+            android:layout_below="@+id/textView_taxation_YA2022_education_fees_self"
+            android:text="Description: Other than a degree at masters or doctorate level – Course of study in law, accounting, islamic financing, tehcnical, vocational, industrial, scientific or technology, Degree at masters or doctorate level – Any course of study, Course of study undertaken for the purpose of upskilling or self-enhancement (Limited to RM7000)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_education_fees_self"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_education_fees_self_description"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="limited to RM7000"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_supporting_equipment"
+            android:layout_below="@+id/editText_taxation_YA2022_education_fees_self"
+            android:text="22. Supporting Equipment"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_supporting_equipment_description"
+            android:layout_below="@+id/textView_taxation_YA2022_supporting_equipment"
+            android:text="Description: Purchase of basic supporting equipment for disabled self, spouse, child or parent(Limited to RM6000)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_supporting_equipment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_supporting_equipment_description"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="limited to RM6000"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_medical_expenses"
+            android:layout_below="@+id/editText_taxation_YA2022_supporting_equipment"
+            android:text="23. Medical Expenses(Self/Spouse/Child)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_medical_expenses_description"
+            android:layout_below="@+id/textView_taxation_YA2022_medical_expenses"
+            android:text="Description: Serious diseases for self, spouse or child, Fertility treatment for self or spouse, Vaccination for self, spouse and child (Limited to RM8000)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_medical_expenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_medical_expenses_description"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="limited to RM8000"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_epf_kwsp"
+            android:layout_below="@+id/editText_taxation_YA2022_medical_expenses"
+            android:text="24. EPF/KWSP (Limited to RM4000)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_epf_kwsp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_epf_kwsp"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="limited to RM4000"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_life_insurance"
+            android:layout_below="@+id/editText_taxation_YA2022_epf_kwsp"
+            android:text="25. Life Insurance (Limited to RM3000)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_life_insurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_life_insurance"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="limited to RM3000"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_lifestyle"
+            android:layout_below="@+id/editText_taxation_YA2022_life_insurance"
+            android:text="26. LifeStyle"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_lifestyle_description"
+            android:layout_below="@+id/textView_taxation_YA2022_lifestyle"
+            android:text="Description: Lifestyle – Expenses for the use / benefit of self, spouse or child in respect of:"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_lifestyle_description_1"
+            android:layout_below="@+id/textView_taxation_YA2022_lifestyle_description"
+            android:text="Purchase or subscription of books / journals / magazines / newspapers / other similar publications (Not banned reading materials)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_lifestyle_description_2"
+            android:layout_below="@+id/textView_taxation_YA2022_lifestyle_description_1"
+            android:text="Purchase of personal computer, smartphone or tablet (Not for business use)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_lifestyle_description_3"
+            android:layout_below="@+id/textView_taxation_YA2022_lifestyle_description_2"
+            android:text="Purchase of sports equipment for sports activity defined under the Sports Development Act 1997 and payment of gym membership"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_lifestyle_description_4"
+            android:layout_below="@+id/textView_taxation_YA2022_lifestyle_description_3"
+            android:text="Payment of monthly bill for internet subscription (Under own name) (Limited to RM2500)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_lifestyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_lifestyle_description_4"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="limited to RM2500"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_lifestyle_additional"
+            android:layout_below="@+id/editText_taxation_YA2022_lifestyle"
+            android:text="27. LifeStyle(Additional)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_lifestyle_additional_description"
+            android:layout_below="@+id/textView_taxation_YA2022_lifestyle_additional"
+            android:text="Description: Purchase of personal computer smartphone or tablet for self, spouse or child and not for business use(Limited to RM2500)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_lifestyle_additional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_lifestyle_additional_description"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="limited to RM2500"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_lifestyle_sport"
+            android:layout_below="@+id/editText_taxation_YA2022_lifestyle_additional"
+            android:text="28. LifeStyle(Sports)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_lifestyle_sport_description"
+            android:layout_below="@+id/textView_taxation_YA2022_lifestyle_sport"
+            android:text="Description: Purchase of personal computer smartphone or tablet for self, spouse or child and not for business use(Limited to RM500)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_lifestyle_sport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_lifestyle_sport_description"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="limited to RM500"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_socso_perkeso"
+            android:layout_below="@+id/editText_taxation_YA2022_lifestyle_sport"
+            android:text="29. SOCSO/PERKESO"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_socso_perkeso_description"
+            android:layout_below="@+id/textView_taxation_YA2022_socso_perkeso"
+            android:text="Description: Contribution to the Social Security Organization (SOCSO)(Limited to RM350)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_socso_perkeso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_socso_perkeso_description"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="limited to RM350"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_domestic_travel_expenses"
+            android:layout_below="@+id/editText_taxation_YA2022_socso_perkeso"
+            android:text="30. Domestic Travel Expenses"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_domestic_travel_expenses_description"
+            android:layout_below="@+id/textView_taxation_YA2022_domestic_travel_expenses"
+            android:text="Description: Domestic tourism expenses on:"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_domestic_travel_expenses_description_1"
+            android:layout_below="@+id/textView_taxation_YA2022_domestic_travel_expenses_description"
+            android:text="Payment of accommodation at the premises registered with the Commissioner of Tourism under the Tourism Industry Act 1992"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_domestic_travel_expenses_description_2"
+            android:layout_below="@+id/textView_taxation_YA2022_domestic_travel_expenses_description_1"
+            android:text="Payment of entrance fee to a tourist attraction"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_domestic_travel_expenses_description_3"
+            android:layout_below="@+id/textView_taxation_YA2022_domestic_travel_expenses_description_2"
+            android:text="Purchase of domestic tour package through a licensed travel agent registered with the Commissioner of Tourism under the Tourism Industry Act 1992 (Limited to RM1000)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_domestic_travel_expenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_domestic_travel_expenses_description_3"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="limited to RM1000"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_electrical_vehicle_charging_expenses"
+            android:layout_below="@+id/editText_taxation_YA2022_domestic_travel_expenses"
+            android:text="31. Electrical Vehicle Charging Expenses"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_electrical_vehicle_charging_expenses_description"
+            android:layout_below="@+id/textView_taxation_YA2022_electrical_vehicle_charging_expenses"
+            android:text="Description: Expenses on charging facilities for Electric Vehicle (Not for business use) (Limited to RM2500)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_electrical_vehicle_charging_expenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_electrical_vehicle_charging_expenses_description"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="limited to RM2500"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_pcb"
+            android:layout_below="@+id/editText_taxation_YA2022_electrical_vehicle_charging_expenses"
+            android:text="32. Monthly Tax Deduction(MTD)/Potongan Cukai Bulanan(PCB)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_pcb_description"
+            android:layout_below="@+id/textView_taxation_YA2022_pcb"
+            android:text="Description: It is a series of monthly deductions that go towards payment of your taxes in relation to your employment income. These monthly deductions are retained by your employer and paid over to the Inland Revenue Board (LHDN)"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_pcb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_pcb_description"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="amount of MTD/PCB"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_zakat"
+            android:layout_below="@+id/editText_taxation_YA2022_pcb"
+            android:text="33. Zakat"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_zakat_description"
+            android:layout_below="@+id/textView_taxation_YA2022_zakat"
+            android:text="Description: Muslims who meet the nisab requirements are obligated to contribute 2.5% of their income as Zakat. The income includes all types of wages and payments obtained from their work such as salaries, royalties, commissions, rental income, bonuses and freelance payments."
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText_taxation_YA2022_zakat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_taxation_YA2022_zakat_description"
+            android:background="@drawable/border"
+            android:cursorVisible="false"
+            android:hint="amount of zakat"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_total_other_details"
+            android:layout_below="@+id/editText_taxation_YA2022_zakat"
+            android:text="Total of the Other Detail Section"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_amount_total_other_details"
+            android:background="@drawable/border"
+            android:layout_below="@+id/textView_taxation_YA2022_total_other_details"
+            android:text="RM"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:id="@+id/button_start_calculate_other_details"
+            android:layout_below="@+id/textView_taxation_YA2022_amount_total_other_details"
+            android:layout_marginTop="10dp"
+            android:text="Calculate Total Other Detail"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:id="@+id/button_start_calculate"
+            android:layout_below="@+id/button_start_calculate_other_details"
+            android:layout_marginTop="50dp"
+            android:text="Calculate Personal Income Tax"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_taxation_YA2022_print_income_details_header"
+            android:layout_below="@+id/button_start_calculate"
+            android:text="Income Tax Summary YA 2022"
+            android:background="@color/tiff_blue"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_print_income_details_header"
+            android:id="@+id/textView_taxation_YA2022_print_gross_income">
+
+            <TextView
+                android:id="@+id/textView_taxation_YA2022_print_gross_income_before_deduction"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="Gross Income Before Deduction"
+                android:textColor="#555555"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView_gross_income"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="N/V"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- New LinearLayout for Retrenchment Compensation -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_print_gross_income"
+            android:id="@+id/textView_taxation_YA2022_print_taxDeduction_header">
+
+            <TextView
+                android:id="@+id/textView_taxation_YA2022_print_retrenchment_compensation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="Tax Deductions"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_print_taxDeduction_header"
+            android:id="@+id/textView_taxation_YA2022_individual_spouse_relief">
+
+            <TextView
+                android:id="@+id/textView_taxation_YA2022_print_individual_deduction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="Individual Relief"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_individual_deduction"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="N/V"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_individual_spouse_relief"
+            android:id="@+id/textView_taxation_YA2022_child_relief">
+
+            <TextView
+                android:id="@+id/textView_taxation_YA2022_print_child_deduction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="Child Relief"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_child_deduction"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="N/V"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_child_relief"
+            android:id="@+id/textView_taxation_YA2022_parent_relief">
+
+            <TextView
+                android:id="@+id/textView_taxation_YA2022_print_parent_deduction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="Parent Relief"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_parent_deduction"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="N/V"
+                android:textColor="#555555"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_parent_relief"
+            android:id="@+id/textView_taxation_YA2022_other_relief">
+
+            <TextView
+                android:id="@+id/textView_taxation_YA2022_print_other_deduction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="Other Relief"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_other_deduction"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="N/V"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_other_relief"
+            android:id="@+id/textView_taxation_YA2022_taxable_income">
+
+            <TextView
+                android:id="@+id/textView_taxation_YA2022_print_taxable_income"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="Taxable Income"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_taxable_income"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="N/V"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/textView_taxation_YA2022_taxable_income"
+            android:id="@+id/textView_taxation_YA2022_tax_amount">
+
+            <TextView
+                android:id="@+id/textView_taxation_YA2022_print_tax_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="Tax Amount(Tax Rate)"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_tax_amount"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="N/V"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_tax_amount"
+            android:id="@+id/textView_taxation_YA2022_pcb_last">
+
+            <TextView
+                android:id="@+id/textView_taxation_YA2022_print_pcb_last"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="PCB"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_pcb_last"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="N/V"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView_taxation_YA2022_pcb_last"
+            android:id="@+id/textView_taxation_YA2022_zakat_last">
+
+            <TextView
+                android:id="@+id/textView_taxation_YA2022_print_zakat_last"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="Zakat"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_zakat_last"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="N/V"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/textView_taxation_YA2022_zakat_last"
+            android:id="@+id/textView_taxation_YA2022_tax_needed_to_pay">
+
+            <TextView
+                android:id="@+id/textView_taxation_YA2022_print_tax_needed_to_pay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="Tax You Should Pay"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView_tax_needed_to_pay"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="N/V"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

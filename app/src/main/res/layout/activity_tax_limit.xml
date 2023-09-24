@@ -1,0 +1,1203 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_marginBottom="50dp"
+        android:id="@+id/incomeDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:background="@drawable/border">
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarSalaries"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewSalaries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Salaries"/>
+
+            <ProgressBar
+                android:id="@+id/progressBarSalaries"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewSalaries"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarWages"
+            android:layout_below="@+id/RelativeLayoutProgressBarSalaries"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewWages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Wages"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarWages"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewWages"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarCommissions"
+            android:layout_below="@+id/RelativeLayoutProgressBarWages"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewCommissions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Commissions"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarCommissions"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewCommissions"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarBonuses"
+            android:layout_below="@+id/RelativeLayoutProgressBarCommissions"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewBonuses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Bonuses"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarBonuses"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewBonuses"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarAllowances"
+            android:layout_below="@+id/RelativeLayoutProgressBarBonuses"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewAllowances"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Allowances"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarAllowances"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewAllowances"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarPensions"
+            android:layout_below="@+id/RelativeLayoutProgressBarAllowances"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewPensions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Pensions"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarPensions"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewPensions"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarRent"
+            android:layout_below="@+id/RelativeLayoutProgressBarPensions"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewRent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Rent"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarRent"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewRent"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarInterest"
+            android:layout_below="@+id/RelativeLayoutProgressBarRent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewInterest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Interest"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarInterest"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewInterest"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarGainProfits"
+            android:layout_below="@+id/RelativeLayoutProgressBarInterest"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewGainProfits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Gain or Profits from any trade"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarGainProfits"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewGainProfits"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarDividendDiscounts"
+            android:layout_below="@+id/RelativeLayoutProgressBarGainProfits"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewDividendDiscounts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Dividend"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarDividendDiscounts"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewDividendDiscounts"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarCompensationLoss"
+            android:layout_below="@+id/RelativeLayoutProgressBarDividendDiscounts"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewCompensationLoss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Compensation for Loss of Employment"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarCompensationLoss"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewCompensationLoss"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarGift"
+            android:layout_below="@+id/RelativeLayoutProgressBarCompensationLoss"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewGift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Gift"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarGift"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewGift"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarInheritance"
+            android:layout_below="@+id/RelativeLayoutProgressBarGift"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewInheritance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Inheritance"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarInheritance"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_below="@+id/textviewInheritance"
+                android:layout_centerInParent="true"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/custom_progressbar" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarFoodDrinks"
+            android:layout_below="@+id/RelativeLayoutProgressBarInheritance"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewFoodDrinks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Food And Drinks"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarFoodDrinks"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewFoodDrinks"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarShopping"
+            android:layout_below="@+id/RelativeLayoutProgressBarFoodDrinks"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewShopping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Shopping"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarShopping"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewShopping"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarHousing"
+            android:layout_below="@+id/RelativeLayoutProgressBarShopping"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewHousing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Housing"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarHousing"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewHousing"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarTransportation"
+            android:layout_below="@+id/RelativeLayoutProgressBarHousing"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewTransportation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Transportation"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarTransportation"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewTransportation"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarVehicle"
+            android:layout_below="@+id/RelativeLayoutProgressBarTransportation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Vehicle"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarVehicle"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewVehicle"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarLifeEntertainment"
+            android:layout_below="@+id/RelativeLayoutProgressBarVehicle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewLifeEntertainment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Life and Entertainment"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarLifeEntertainment"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewLifeEntertainment"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarCommunication"
+            android:layout_below="@+id/RelativeLayoutProgressBarLifeEntertainment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewCommunication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Communication"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarCommunication"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewCommunication"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarInvestments"
+            android:layout_below="@+id/RelativeLayoutProgressBarCommunication"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewInvestments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Investments"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarInvestments"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewInvestments"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarPaymentAlimony"
+            android:layout_below="@+id/RelativeLayoutProgressBarInvestments"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewPaymentAlimony"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Payment alimony to former wife"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarPaymentAlimony"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewPaymentAlimony"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarSSPN"
+            android:layout_below="@+id/RelativeLayoutProgressBarPaymentAlimony"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewSSPN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="SSPN - Child Education Saving"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarSSPN"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewSSPN"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarBreastfeeding"
+            android:layout_below="@+id/RelativeLayoutProgressBarSSPN"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewBreastfeeding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Breastfeeding Equipment"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarBreastfeeding"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewBreastfeeding"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarChildrenCentres"
+            android:layout_below="@+id/RelativeLayoutProgressBarBreastfeeding"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewChildrenCentres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Children Centres and kindergartens fees"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarChildrenCentres"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewChildrenCentres"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarParentMedical"
+            android:layout_below="@+id/RelativeLayoutProgressBarChildrenCentres"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewParentMedical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Parent Medical"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarParentMedical"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewParentMedical"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarAnnuityPRS"
+            android:layout_below="@+id/RelativeLayoutProgressBarParentMedical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewAnnuityPRS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Annuity/PRS"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarAnnuityPRS"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewAnnuityPRS"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarEducationMedicalInsurance"
+            android:layout_below="@+id/RelativeLayoutProgressBarAnnuityPRS"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewEducationMedicalInsurance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Education and Medical Insurance"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarEducationMedicalInsurance"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewEducationMedicalInsurance"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarEducationSelf"
+            android:layout_below="@+id/RelativeLayoutProgressBarEducationMedicalInsurance"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewEducationSelf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Education - Self"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarEducationSelf"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewEducationSelf"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarSupportingEquipment"
+            android:layout_below="@+id/RelativeLayoutProgressBarEducationSelf"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewSupportingEquipment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Supporting Equipment"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarSupportingEquipment"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewSupportingEquipment"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarMedicalExpenses"
+            android:layout_below="@+id/RelativeLayoutProgressBarSupportingEquipment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewMedicalExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Medical Expenses - Self/Spouse/Child"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarMedicalExpenses"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewMedicalExpenses"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarEPFKWSP"
+            android:layout_below="@+id/RelativeLayoutProgressBarMedicalExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewEPFKWSP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="EPF/KWSP"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarEPFKWSP"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewEPFKWSP"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarLifeInsurance"
+            android:layout_below="@+id/RelativeLayoutProgressBarEPFKWSP"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewLifeInsurance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Life Insurance"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarLifeInsurance"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewLifeInsurance"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarLifeStyle"
+            android:layout_below="@+id/RelativeLayoutProgressBarLifeInsurance"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewLifeStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Life Style"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarLifeStyle"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewLifeStyle"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarLifeStyleAdditional"
+            android:layout_below="@+id/RelativeLayoutProgressBarLifeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewLifeStyleAdditional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Life Style - Additional"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarLifeStyleAdditional"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewLifeStyleAdditional"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarLifeStyleSport"
+            android:layout_below="@+id/RelativeLayoutProgressBarLifeStyleAdditional"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewLifeStyleSport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Life Style - Sport"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarLifeStyleSport"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewLifeStyleSport"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarSocsoPerkeso"
+            android:layout_below="@+id/RelativeLayoutProgressBarLifeStyleSport"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewSocsoPerkeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Socso/Perkeso"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarSocsoPerkeso"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewSocsoPerkeso"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarDomesticTravelExpenses"
+            android:layout_below="@+id/RelativeLayoutProgressBarSocsoPerkeso"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewDomesticTravelExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Domestic Travel Expenses"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarDomesticTravelExpenses"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewDomesticTravelExpenses"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarElectricalVehicle"
+            android:layout_below="@+id/RelativeLayoutProgressBarDomesticTravelExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewElectricalVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Electrical Vehicle Charging Expenses"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarElectricalVehicle"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewElectricalVehicle"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarMonthlyTaxDeduction"
+            android:layout_below="@+id/RelativeLayoutProgressBarElectricalVehicle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewMonthlyTaxDeduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Monthly Tax Deduction - PCB"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarMonthlyTaxDeduction"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewMonthlyTaxDeduction"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/RelativeLayoutProgressBarZakat"
+            android:layout_below="@+id/RelativeLayoutProgressBarMonthlyTaxDeduction"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textviewZakat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Zakat"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarZakat"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="100"
+                android:layout_below="@+id/textviewZakat"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+</ScrollView>

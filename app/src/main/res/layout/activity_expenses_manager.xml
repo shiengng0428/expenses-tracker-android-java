@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".expensesManagerModule.ExpensesManagerActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/topRow"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Balance"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"/>
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/total_amount"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:text="RM 0.00"
+                android:textSize="30sp"
+                android:paddingTop="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/border5"/>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/progressBarHorizontal"
+        android:layout_below="@+id/topRow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:progress="0"
+            android:max="100"
+            android:progressDrawable="@drawable/custom_progressbar"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/progressBarHorizontal"
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linearLayout_button">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"/>
+
+
+
+        </ScrollView>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_button"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/addIncome"
+            android:background="@color/tiff_blue"
+            android:text="Add Income"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:id="@+id/addExpense"
+            android:background="@color/tiff_blue"
+            android:text="Add Expense"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+    </LinearLayout>
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"/>
+
+</RelativeLayout>

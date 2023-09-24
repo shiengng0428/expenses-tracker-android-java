@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "908157134440",
+    "project_id": "aiexpensestracker",
+    "storage_bucket": "aiexpensestracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908157134440:android:cd7e05a3802351e06b3ddd",
+        "android_client_info": {
+          "package_name": "com.example.aiexpensestracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908157134440-s97j4mo36h0jp5lqi95qn8m9umkm2109.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1k5xBE6GpaB5AEh2Po41w3TTL7ajdGTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908157134440-s97j4mo36h0jp5lqi95qn8m9umkm2109.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

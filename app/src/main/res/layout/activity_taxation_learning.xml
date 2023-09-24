@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#E4E3E3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardView.Light"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/lesson_1"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="12dp"
+                    android:elevation="12dp"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                    <ImageView
+                        android:id="@+id/circleImage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/lesson_1"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="What is Income Tax?"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/view"
+                    app:layout_constraintTop_toTopOf="@+id/view"
+                    app:layout_constraintBottom_toTopOf="@+id/desc"/>
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lesson 1"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#8A000000"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/view"
+                    app:layout_constraintTop_toBottomOf="@+id/name"/>
+
+                <Button
+                    android:id="@+id/arrowBtn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/expandableView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp"
+                    android:padding="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/desc"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/lesson1_taxTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tax is imposed annually on individuals who receive income in respect of:"
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lesson1_taxTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="a) Gains / profit from a business;"
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson1_taxTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lesson1_taxTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="b) Gains / profit from employment;"
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson1_taxTitle1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson1_taxTitle3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="c) Dividends, interest or discounts;"
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson1_taxTitle2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson1_taxTitle4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="d) Rent, royalties or premiums;"
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson1_taxTitle3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson1_taxTitle5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="e) Pensions, annuities or other periodic payments; and"
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson1_taxTitle4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson1_taxTitle6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="f) Gains / profit not falling under any of the foregoing paragraphs."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson1_taxTitle5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson1_taxTitle7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="The Income Tax Act 1967 (ITA) enforces administration and collection of income tax on persons and taxable income."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson1_taxTitle6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson1_taxTitle8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="The Inland Revenue Board of Malaysia (IRBM) is one of the main revenue collecting agencies of the Ministry of Finance."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson1_taxTitle7"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardView.Light"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/lesson_2"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="12dp"
+                    android:elevation="12dp"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+                    <ImageView
+                        android:id="@+id/circleImage2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/lesson_2" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Who is taxable?"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/view2"
+                    app:layout_constraintTop_toTopOf="@+id/view2"
+                    app:layout_constraintBottom_toTopOf="@+id/desc2"/>
+
+                <TextView
+                    android:id="@+id/desc2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lesson 2"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#8A000000"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/view2"
+                    app:layout_constraintTop_toBottomOf="@+id/name2"/>
+
+                <Button
+                    android:id="@+id/arrowBtn2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view2"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/expandableView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp"
+                    android:padding="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/desc2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/lesson2_taxTitle"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:text="Income tax in Malaysia is imposed on the income of any person that is accrued, derived or received in Malaysia."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lesson2_taxTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="If an individual's total taxable income exceeds the threshold value, they are required to register for an income tax file."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson2_taxTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lesson2_taxTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="The tax liability and applicable tax reliefs for an individual depend on their residency status."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson2_taxTitle1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson2_taxTitle3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Resident individuals are taxed based on the tax rate and eligible for tax reliefs as per Section 45A-49 of the ITA 1967."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson2_taxTitle2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson2_taxTitle4"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:text="On the other hand, non-resident individuals are subject to a flat tax rate of 30% and cannot enjoy any reliefs."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson2_taxTitle3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson2_taxTitle5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Any income sourced from outside Malaysia and received in Malaysia is exempted from taxation."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson2_taxTitle4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson2_taxTitle6"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:text="To summarize, Malaysian income tax applies to income earned in Malaysia or received from outside Malaysia, and the tax liability and reliefs are based on the individual's residency status."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson2_taxTitle5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardView.Light"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/lesson_3"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="12dp"
+                    android:elevation="12dp"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+                    <ImageView
+                        android:id="@+id/circleImage3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/lesson_3" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/name3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="When is Taxable"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/view3"
+                    app:layout_constraintTop_toTopOf="@+id/view3"
+                    app:layout_constraintBottom_toTopOf="@+id/desc3"/>
+
+                <TextView
+                    android:id="@+id/desc3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lesson 3"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#8A000000"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/view3"
+                    app:layout_constraintTop_toBottomOf="@+id/name3"/>
+
+                <Button
+                    android:id="@+id/arrowBtn3"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view3"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/expandableView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp"
+                    android:padding="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/desc3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/lesson3_taxTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="In Malaysia, income is considered taxable if it meets certain criteria."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lesson3_taxTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Specifically, income is taxable if it is accrued, derived, or received within Malaysia, or if it is received in Malaysia from outside the country."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson3_taxTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lesson3_taxTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="The Malaysian tax system operates on a territorial principle, meaning that income is taxed based on its source rather than the residence or nationality of the individual."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson3_taxTitle1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson3_taxTitle3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="This means that even if an individual is not a resident of Malaysia, any income they earn within the country is still subject to Malaysian income tax."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson3_taxTitle2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson3_taxTitle4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Similarly, if an individual receives income from outside Malaysia but it is received in Malaysia, it is also subject to Malaysian income tax."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson3_taxTitle3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson3_taxTitle5"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:text="Taxable income can include a range of sources, such as employment income, business profits, rental income, and investment income."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson3_taxTitle4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson3_taxTitle6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="The amount of tax an individual pays depends on their income level, with higher income earners typically paying a higher rate of tax."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson3_taxTitle5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson3_taxTitle7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="To ensure compliance with the tax laws, individuals are required to register for an income tax file and file an annual tax return."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson3_taxTitle6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson3_taxTitle8"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:text="The Malaysian tax authorities also have the power to investigate cases of suspected tax evasion or non-compliance. Failure to comply with the tax laws can result in penalties and fines."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson3_taxTitle7"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardView.Light"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/lesson_4"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="12dp"
+                    android:elevation="12dp"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+                    <ImageView
+                        android:id="@+id/circleImage4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/lesson_4" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/name4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="How to file your tax?"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/view4"
+                    app:layout_constraintTop_toTopOf="@+id/view4"
+                    app:layout_constraintBottom_toTopOf="@+id/desc4"/>
+
+                <TextView
+                    android:id="@+id/desc4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lesson 4"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#8A000000"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/view4"
+                    app:layout_constraintTop_toBottomOf="@+id/name4"/>
+
+                <Button
+                    android:id="@+id/arrowBtn4"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view4"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/expandableView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp"
+                    android:padding="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/desc4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/lesson4_taxTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="To file your tax in Malaysia, you first need to register for an income tax file number."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lesson4_taxTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="You can do this by completing and submitting Form CP1 to the Inland Revenue Board of Malaysia (IRBM).;"
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson4_taxTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lesson4_taxTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Once you have registered, you will receive a notification letter containing your tax file number and other relevant details."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson4_taxTitle1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson4_taxTitle3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="As a taxpayer, you are required to file your tax return annually, with the deadline typically falling on April 30th of the following year."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson4_taxTitle2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson4_taxTitle4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="To file your tax return, you can either do so online through the IRBM's e-filing system or by submitting a physical tax return form (Form BE) to the nearest IRBM branch."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson4_taxTitle3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson4_taxTitle5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="If you choose to e-file, you will need to first register for an e-filing account on the IRBM website and follow the instructions provided."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson4_taxTitle4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson4_taxTitle6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="When filing your tax return, you will need to provide details of your income and tax reliefs, as well as any deductions or exemptions you are eligible for."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson4_taxTitle5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson4_taxTitle7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="After submitting your tax return, you will receive a tax assessment notice from the IRBM, which will indicate the amount of tax you are required to pay (if any) or any refund due."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson4_taxTitle6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson4_taxTitle8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="If you disagree with the assessment, you can lodge an appeal with the IRBM within 30 days of the date of the notice."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson4_taxTitle7"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardView.Light"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView4">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/lesson_5"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="12dp"
+                    android:elevation="12dp"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5">
+
+                    <ImageView
+                        android:id="@+id/circleImage5"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/lesson_5" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/name5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Why we must pay tax?"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/view5"
+                    app:layout_constraintTop_toTopOf="@+id/view5"
+                    app:layout_constraintBottom_toTopOf="@+id/desc5"/>
+
+                <TextView
+                    android:id="@+id/desc5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lesson 5"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#8A000000"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/view5"
+                    app:layout_constraintTop_toBottomOf="@+id/name5"/>
+
+                <Button
+                    android:id="@+id/arrowBtn5"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view5"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/expandableView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp"
+                    android:padding="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/desc5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/lesson5_taxTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="The primary reason for paying tax in Malaysia is to contribute to the country's development and progress."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lesson5_taxTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Tax revenue is used by the government to fund public services and infrastructure, such as healthcare, education, transportation, and public utilities."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson5_taxTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lesson5_taxTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="It is also used to support social welfare programs and provide assistance to those in need."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson5_taxTitle1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson5_taxTitle3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Another reason for paying tax is to promote social and economic equality by redistributing wealth from higher income earners to those in lower income brackets."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson5_taxTitle2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson5_taxTitle4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="The Malaysian tax system is progressive, meaning that higher income earners are subject to a higher tax rate, while those in lower income brackets may be eligible for tax reliefs and exemptions.;"
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson5_taxTitle3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson5_taxTitle5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="By paying tax, individuals also fulfill their civic duty and contribute to the country's overall welfare and development."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson5_taxTitle4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson5_taxTitle6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Failure to pay tax can result in penalties and legal action, as well as damage to an individual's reputation and credibility."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson5_taxTitle5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson5_taxTitle7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Additionally, tax compliance is required for certain transactions and activities, such as obtaining a business license or applying for a loan."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson5_taxTitle6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson5_taxTitle8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Overall, paying tax is a crucial aspect of being a responsible and active member of Malaysian society, helping to support the common good and promote the welfare of all citizens."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson5_taxTitle7"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardView.Light"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/lesson_6"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="12dp"
+                    android:elevation="12dp"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6">
+
+                    <ImageView
+                        android:id="@+id/circleImage6"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/lesson_6" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/name6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="How to submit your ITRF"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/view6"
+                    app:layout_constraintTop_toTopOf="@+id/view6"
+                    app:layout_constraintBottom_toTopOf="@+id/desc6"/>
+
+                <TextView
+                    android:id="@+id/desc6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lesson 6"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#8A000000"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/view6"
+                    app:layout_constraintTop_toBottomOf="@+id/name6"/>
+
+                <Button
+                    android:id="@+id/arrowBtn6"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view6"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/expandableView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp"
+                    android:padding="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/desc6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/lesson6_taxTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="To submit your Income Tax Return Form (ITRF) in Malaysia, gather all necessary documents and information, including Form EA, Form EC, and supporting documents related to income and expenses."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lesson6_taxTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Complete the ITRF form manually or electronically via the e-Filing system on the Inland Revenue Board of Malaysia (IRBM) website."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson6_taxTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lesson6_taxTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Double-check the form for accuracy and completeness before submitting."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson6_taxTitle1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson6_taxTitle3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Submit the ITRF form electronically through the e-Filing system or manually at any IRBM branch."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson6_taxTitle2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson6_taxTitle4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="If submitting manually, include all necessary supporting documents, such as EA Form and receipts."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson6_taxTitle3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson6_taxTitle5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Contact the IRBM through their hotline, email or website for assistance or questions."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson6_taxTitle4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson6_taxTitle6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="The deadline for submitting your ITRF in Malaysia is typically April 30th each year, but it may vary."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson6_taxTitle5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson6_taxTitle7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Check the IRBM website or consult with a tax professional to confirm the deadline."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson6_taxTitle6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/lesson6_taxTitle8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Failing to submit the ITRF on time may result in penalties and fines."
+                        android:textColor="#000"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintTop_toBottomOf="@+id/lesson6_taxTitle7"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
